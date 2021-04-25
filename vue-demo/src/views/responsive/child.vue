@@ -6,15 +6,17 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 import cloneDeep from './util';
 @Component({})
 export  default class Child extends Vue {
-  @Prop() public value!: Array<number>;
+  @Prop() public value!: number[];
+  @Prop() public changeTimes!: number;
   get currentData() {
     return cloneDeep(this.value);
   }
-  set currentData(val: Array<number>) {
+  set currentData(val: number[]) {
     this.$emit('input', val);
   }
   public handleClick() {
     this.currentData.push(this.currentData[this.currentData.length - 1] + 1);
+    this.$emit('update:changeTimes', this.changeTimes + 1);
   }
 }
 </script>

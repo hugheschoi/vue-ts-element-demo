@@ -29,6 +29,21 @@ const routes: RouteConfig[] = [
     name: 'responsive',
     component: () => import(/* webpackChunkName: "responsive" */ '../views/responsive/index.vue'),
   },
+  {
+    path: '/eventbus',
+    name: 'eventbus',
+    component: () => import(/* webpackChunkName: "responsive" */ '../views/event-bus/index.vue'),
+  },
+  {
+    path: '/eventbusdetail',
+    name: 'eventbusdetail',
+    component: () => import(/* webpackChunkName: "responsive" */ '../views/event-bus/detail.vue'),
+  },
+  {
+    path: '/provideinject',
+    name: 'provideinject',
+    component: () => import(/* webpackChunkName: "responsive" */ '../views/provide-inject/index.vue'),
+  },
 ];
 
 const router = new VueRouter({

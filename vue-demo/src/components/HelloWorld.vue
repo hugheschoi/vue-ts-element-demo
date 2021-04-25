@@ -1,8 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link :to="{name: 'attrs-listner'}">attrs listner</router-link><br/>
-    <router-link :to="{name: 'responsive'}">responsive</router-link>
+    <router-link :to="{name: 'attrs-listner'}">attrs listner</router-link><br>
+    <router-link :to="{name: 'responsive'}">responsive</router-link><br>
+    <keep-alive>
+      <router-link :to="{name: 'eventbus'}">eventbus</router-link>
+    </keep-alive>
+    <br>
+    <keep-alive>
+      <router-link :to="{name: 'eventbusdetail'}">eventbusdetail</router-link>
+    </keep-alive><br>
+    <router-link :to="{name: 'provideinject'}">Provide Inject</router-link><br>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
